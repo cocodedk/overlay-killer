@@ -9,7 +9,7 @@ This Chrome extension removes annoying overlays and restores scrollbars on websi
     You can either download the code as a ZIP file and extract it, or clone the repository using Git:
 
     ```bash
-    git clone https://github.com/your-username/overlay-killer-chrome-extension.git
+    git clone https://github.com/cocodedk/overlay-killer-chrome-extension.git
     ```
 
 2.  **Load the Extension in Chrome:**
