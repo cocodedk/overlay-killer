@@ -1,0 +1,21 @@
+# Overlay Killer
+
+> Browser extension for Chrome and Firefox that removes annoying overlays and restores scrollbars on websites.
+
+Overlay Killer removes cookie consent overlays, newsletter popups, and other obstructive page elements that prevent users from accessing web content. It also restores scroll functionality that some sites disable.
+
+## Key Features
+- Removes cookie consent overlays and popups automatically
+- Restores scrollbars blocked by overlay scripts
+- Works on Chrome (MV3) and Firefox
+- No configuration needed — works automatically
+
+## Source
+- [GitHub Repository](https://github.com/cocodedk/overlay-killer)
+- [Releases](https://github.com/cocodedk/overlay-killer/releases)
+
+## Author
+Babak Bandpey — [cocode.dk](https://cocode.dk) | [LinkedIn](https://linkedin.com/in/babakbandpey)
+
+## License
+Apache-2.0

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Overlay Killer — Remove Cookie Banners and Popups</title>
+  <meta name="description" content="Overlay Killer is a free browser extension for Chrome and Firefox that removes cookie consent overlays and restores scrollbars. Works automatically — no configuration needed." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://cocodedk.github.io/overlay-killer/" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Overlay Killer" />
+  <meta property="og:title" content="Overlay Killer — Remove Cookie Banners and Popups" />
+  <meta property="og:description" content="Free browser extension for Chrome and Firefox that removes cookie consent overlays and restores scrollbars automatically." />
+  <meta property="og:url" content="https://cocodedk.github.io/overlay-killer/" />
+  <meta property="og:image" content="https://cocodedk.github.io/overlay-killer/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Overlay Killer extension logo — X symbol on dark background" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Overlay Killer — Remove Cookie Banners and Popups" />
+  <meta name="twitter:description" content="Free Chrome and Firefox extension that removes cookie overlays automatically." />
+  <meta name="twitter:image" content="https://cocodedk.github.io/overlay-killer/og.png" />
+  <meta name="twitter:image:alt" content="Overlay Killer browser extension" />
+
+  <!-- Hreflang alternates -->
+  <link rel="alternate" hreflang="en"        href="https://cocodedk.github.io/overlay-killer/" />
+  <link rel="alternate" hreflang="fa"        href="https://cocodedk.github.io/overlay-killer/fa/" />
+  <link rel="alternate" hreflang="x-default" href="https://cocodedk.github.io/overlay-killer/" />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Overlay Killer",
+    "description": "Browser extension for Chrome and Firefox that removes cookie consent overlays and restores scrollbars on websites. Works automatically.",
+    "url": "https://cocodedk.github.io/overlay-killer/",
+    "downloadUrl": "https://github.com/cocodedk/overlay-killer/releases/latest/download/overlay-killer-chrome.zip",
+    "applicationCategory": "BrowserApplication",
+    "operatingSystem": "Chrome, Firefox, Chromium, Edge",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "author": {
+      "@type": "Person",
+      "name": "Babak Bandpey",
+      "url": "https://cocode.dk",
+      "sameAs": ["https://linkedin.com/in/babakbandpey", "https://github.com/cocodedk"]
+    },
+    "codeRepository": "https://github.com/cocodedk/overlay-killer"
+  }
+  </script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <span class="logo">✕ Overlay Killer</span>
+    <a href="fa/" class="lang-switch">فارسی</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Kill Overlays. Browse Freely.</h1>
+      <p>Overlay Killer removes cookie consent banners, newsletter popups, and scroll-blocking overlays automatically — on Chrome and Firefox. No configuration needed.</p>
+      <div class="btn-group">
+        <a href="https://github.com/cocodedk/overlay-killer/releases/latest/download/overlay-killer-chrome.zip" class="btn">Download for Chrome</a>
+        <a href="https://github.com/cocodedk/overlay-killer/releases/latest/download/overlay-killer-firefox.zip" class="btn btn-outline">Download for Firefox</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Features</h2>
+      <ul>
+        <li>Automatically removes cookie consent overlays and privacy banners</li>
+        <li>Restores scrollbars blocked by overlay scripts</li>
+        <li>Works on Chrome (Manifest V3) and Firefox</li>
+        <li>No configuration required — installs and works immediately</li>
+        <li>No data collection — fully private and offline</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Installation — Chrome</h2>
+      <ol>
+        <li>Download <a href="https://github.com/cocodedk/overlay-killer/releases/latest/download/overlay-killer-chrome.zip">overlay-killer-chrome.zip</a> and extract it.</li>
+        <li>Open Chrome and navigate to <code>chrome://extensions/</code>.</li>
+        <li>Enable <strong>Developer mode</strong> (top-right toggle).</li>
+        <li>Click <strong>Load unpacked</strong> and select the <code>chrome/</code> folder.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Installation — Firefox</h2>
+      <ol>
+        <li>Download <a href="https://github.com/cocodedk/overlay-killer/releases/latest/download/overlay-killer-firefox.zip">overlay-killer-firefox.zip</a> and extract it.</li>
+        <li>Open Firefox and navigate to <code>about:debugging</code>.</li>
+        <li>Click <strong>This Firefox</strong> → <strong>Load Temporary Add-on</strong>.</li>
+        <li>Select <code>firefox/manifest.json</code> from the extracted folder.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Build from Source</h2>
+      <pre><code>git clone https://github.com/cocodedk/overlay-killer.git
+cd overlay-killer
+# Load chrome/ or firefox/ directory as appropriate</code></pre>
+      <p>No build step required — the extension runs directly from source.</p>
+    </section>
+
+    <section>
+      <h2>Author</h2>
+      <p><strong>Babak Bandpey</strong> — <a href="https://cocode.dk" target="_blank" rel="noreferrer">cocode.dk</a> | <a href="https://linkedin.com/in/babakbandpey" target="_blank" rel="noreferrer">LinkedIn</a> | <a href="https://github.com/cocodedk" target="_blank" rel="noreferrer">GitHub</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Apache-2.0 &nbsp;|&nbsp; © 2026 <a href="https://cocode.dk" target="_blank" rel="noreferrer">Cocode</a> &nbsp;|&nbsp; Created by <a href="https://linkedin.com/in/babakbandpey" target="_blank" rel="noreferrer">Babak Bandpey</a></p>
+  </footer>
+</body>
+</html>

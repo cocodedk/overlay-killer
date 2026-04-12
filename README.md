@@ -1,30 +1,63 @@
-# Overlay Killer Extension
+# Overlay Killer
 
-This repository contains the source code for the Overlay Killer extension, available for both Google Chrome and Mozilla Firefox.
+Overlay Killer removes annoying overlays and restores scrollbars on websites that try to force you to accept their policies before you can view their content. Available for both Google Chrome and Mozilla Firefox.
 
-## Project Structure
+## Website
+- [English](https://cocodedk.github.io/overlay-killer/)
+- [فارسی (Persian)](https://cocodedk.github.io/overlay-killer/fa/)
 
-*   `chrome/`: Contains the source code for the Chrome extension.
-*   `firefox/`: Contains the source code for the Firefox add-on.
+## Features
+- Automatically removes cookie consent overlays and privacy banners
+- Restores scrollbars blocked by overlay scripts
+- Works on Chrome (Manifest V3) and Firefox
+- No configuration required — installs and works immediately
+- No data collection — fully private and offline
 
-## Description
+## Download
+- [**Download for Chrome**](https://github.com/cocodedk/overlay-killer/releases/latest/download/overlay-killer-chrome.zip)
+- [**Download for Firefox**](https://github.com/cocodedk/overlay-killer/releases/latest/download/overlay-killer-firefox.zip)
 
-This extension removes annoying overlays and restores scrollbars on websites that try to force you to accept their policies before you can view their content.
+## Build from Source
+**Prerequisites:** Google Chrome 116+ or Mozilla Firefox.
 
-For instructions on how to install and use the extension, please refer to the `README.md` file inside the respective browser's directory.
+```bash
+git clone https://github.com/cocodedk/overlay-killer.git
+cd overlay-killer
+./scripts/install-hooks.sh
+```
 
----
-# افزونه Overlay Killer
+**Chrome:** Open `chrome://extensions/` → Developer mode → Load unpacked → select `chrome/`
 
-این مخزن (repository) شامل کد منبع افزونه Overlay Killer است که برای گوگل کروم و موزیلا فایرفاکس در دسترس است.
+**Firefox:** Open `about:debugging` → This Firefox → Load Temporary Add-on → select `firefox/manifest.json`
 
-## ساختار پروژه
+No build step required — the extension runs directly from source.
 
-*   `chrome/`: شامل کد منبع افزونه کروم است.
-*   `firefox/`: شامل کد منبع افزونه فایرفاکس است.
+## Architecture
 
-## توضیحات
+```
+overlay-killer-chrome-extension/
+├── chrome/          ← Chrome MV3 extension source
+│   ├── manifest.json
+│   ├── content.js   ← Removes overlays, restores scrollbars
+│   ├── popup.html
+│   └── images/
+├── firefox/         ← Firefox WebExtensions source
+│   ├── manifest.json
+│   └── ...
+└── website/         ← GitHub Pages site
+```
 
-این افزونه پوشش‌های آزاردهنده (overlays) را حذف کرده و اسکرول‌بار را در وب‌سایت‌هایی که شما را مجبور به پذیرش سیاست‌هایشان قبل از مشاهده محتوا می‌کنند، بازیابی می‌کند.
+| Component | Technology |
+|-----------|-----------|
+| Chrome runtime | Manifest V3 |
+| Firefox runtime | WebExtensions API |
+| Language | JavaScript (ES2020+) |
+| Build | None required |
 
-برای دستورالعمل‌های مربوط به نحوه نصب و استفاده از افزونه، لطفاً به فایل `README.md` در داخل پوشه مرورگر مربوطه مراجعه کنید.
+## Author
+
+**Babak Bandpey** — [cocode.dk](https://cocode.dk) | [LinkedIn](https://linkedin.com/in/babakbandpey) | [GitHub](https://github.com/cocodedk)
+
+## License
+
+Apache-2.0 | © 2026 [Cocode](https://cocode.dk) | Created by [Babak Bandpey](https://linkedin.com/in/babakbandpey)

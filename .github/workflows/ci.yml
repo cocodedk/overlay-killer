@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: ['**']
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+
+      - name: Validate Chrome manifest
+        run: |
+          if [ ! -f chrome/manifest.json ]; then
+            echo "chrome/manifest.json not found"
+            exit 1
+          fi
+          python3 -m json.tool chrome/manifest.json > /dev/null
+          echo "✓ chrome/manifest.json is valid JSON"
+
+      - name: Validate Firefox manifest
+        run: |
+          if [ ! -f firefox/manifest.json ]; then
+            echo "firefox/manifest.json not found"
+            exit 1
+          fi
+          python3 -m json.tool firefox/manifest.json > /dev/null
+          echo "✓ firefox/manifest.json is valid JSON"
+
+      - name: Check extension structure
+        run: |
+          echo "Checking required extension files..."
+          test -d chrome && echo "✓ chrome/"
+          test -d firefox && echo "✓ firefox/"
+          echo "Extension structure check passed."
